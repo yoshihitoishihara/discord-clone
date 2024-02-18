@@ -21,9 +21,8 @@ export const ChatVideoButton = () => {
                 video: isVideo ? undefined : true,
             }
         }, { skipNull: true });
+        router.push(url);
     }
-
-    router.push(url);
 
     const Icon = isVideo ? VideoOff : Video;
     const tooltipLabel = isVideo ? "End video call" : "Start video call";
