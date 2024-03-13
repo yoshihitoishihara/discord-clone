@@ -20,7 +20,7 @@ type MessageWithMemberWithProfile = Message & {
     }
 }
 
-interface ChatMessagesPrps {
+interface ChatMessagesProps {
     name: string;
     member: Member
     chatId: string;
@@ -42,7 +42,7 @@ export const ChatMessages = ({
     paramKey,
     paramValue,
     type,
-}: ChatMessagesPrps) => {
+}: ChatMessagesProps) => {
     const queryKey = `chat:${chatId}`;
     const addKey = `chat:${chatId}:messages`;
     const updateKey = `chat:${chatId}:messages:update`
@@ -109,7 +109,7 @@ export const ChatMessages = ({
                     ) : (
                         <button
                         onClick={() => fetchNextPage()}
-                            className="text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 text-xs my-4 dark:hover:text-zinc-300 transiton"
+                            className="text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 text-xs my-4 dark:hover:text-zinc-300 transition"
                         >
                             Load previous messages
                         </button>
