@@ -127,7 +127,7 @@ export const ChatMessages = ({
                                 member={message.member}
                                 content={message.content}
                                 fileUrl={message.fileUrl}
-                                deleted={message.deleted}
+                                delete={message.delete}
                                 timestamp={format(new Date(message.createdAt), DATE_FORMAT)}
                                 isUpdated={message.updatedAt !== message.createdAt}
                                 socketUrl={socketUrl}
